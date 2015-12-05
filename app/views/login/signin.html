@@ -1,0 +1,92 @@
+<center>
+  <div class="center-block center container" style="width:100%">
+    <section id="main-content" style="vertical-align:top;margin-left:0 !important;">
+
+      <!-- login form -->
+      <div>
+        <div style="margin-top:10px;" class="">
+          <ng-form role="form" class="form-horizontal" novalidate name="login.logForm" id="logForm">
+            <div class="alert alert-danger col-sm-12 invisible" id="authErr" style="min-width:300px">
+              <!--ng-class="{'b-ng-visible' : authError == ''}" -->
+              {{ login.authError }}&nbsp;
+            </div>
+            <div class="row">
+              <div class="logo-container">
+                <div><img src="./images/logoOrig.png" /></div>
+                <div><img src="./images/RPO-logo.png" /></div>
+                <div><img src="./images/RSign2.png" /></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <h4>Sign in to your RMail Account</h4>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="well col-sm-12" style="margin-bottom:15px;margin-left:10px;">
+                <!-- class="panel panel-default" -->
+                <div>
+                  <!-- class="panel-body"> -->
+                  <div class="form-group required" style="margin-top:15px;margin-left:15px;">
+                    <label for="email" class="control-label col-sm-4" style="white-space: nowrap;">Primary Email Address </label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" ng-model="login.user.email"
+                      required autofocus autocomplete="off">
+                    </div>
+                  </div>
+
+                  <div class="form-group required" style="margin-left:15px;">
+                    <label for="Password" class="control-label col-sm-4">Password </label>
+                    <div class="col-sm-8">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" ng-model="login.user.password"
+                      required>
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-top:15px;margin-left:15px;">
+                    <label for="email" class="control-label col-sm-4" style="white-space: nowrap;">Navigate to </label>
+                    <div class="col-sm-8">
+                      <select name="language" class="form-control" ng-model="login.user.navigateTo" required>
+                        <option value="myAccount.dashboard">My Account</option>
+                        <option value="myAccount.rsign">RSign</option>
+                        <option value="myAccount.rmailweb">RMail Webmail</option>
+                        <option value="myAccount.rmailinbox">RMail Inbox</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">&nbsp;</div>
+                    <div class="col-sm-8" style="text-align:left;">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="staySignedIn" ng-model="login.staySignedIn" ng-true-value="'true'" ng-false-value="'false'"> Stay signed in</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <!--<input type="submit" class="btn-custom" id="btnSubmit" title="Click to submit" ng-disabled='form.$invalid' name="Next" />-->
+                <button class="btn btn-primary" id="btnSubmit" title="Click to submit" ng-disabled="login.logForm.$invalid" ng-click="login.loginUser()">Submit</button>
+
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12">
+                <a href="#" data-toggle="modal" data-target="#forgotPassword">Forgot Password?</a>
+              </div>
+              <div class="col-sm-12">
+                <a ui-sref="login.register">Create Account</a>
+              </div>
+            </div>
+
+          </ng-form>
+        </div>
+      </div>
+    </section>
+  </div>
+</center>

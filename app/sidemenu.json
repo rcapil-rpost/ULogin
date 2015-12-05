@@ -1,0 +1,122 @@
+{
+	"Menu": [
+		{
+			"Display": "Dashboard",
+			"Icon": "glyphicon-dashboard",
+			"URL": "myAccount.dashboard",
+			"Submenu": []
+		},
+		{
+			"Display": "Send",
+			"Icon": "glyphicon-send",
+			"URL": "",
+			"Submenu": [
+				{
+					"Display": "RMail Web",
+					"Icon": "",
+					"URL": "myAccount.rmailweb",
+					"Submenu": []
+				},
+				{
+					"Display": "RMail Inbox",
+					"Icon": "",
+					"URL": "myAccount.rmailinbox",
+					"Submenu": []
+				},
+				{
+					"Display": "RSign",
+					"Icon": "",
+					"URL": "myAccount.rsign",
+					"Submenu": []
+				}
+			]
+		},
+		{
+			"Display": "Reports",
+			"Icon": "glyphicon-stats",
+			"URL": "",
+			"Submenu": [
+				{
+					"Display": "Search",
+					"Icon": "",
+					"URL": "myAccount.reportsearch",
+					"Submenu": []
+				},
+				{
+					"Display": "Schedule",
+					"Icon": "",
+					"URL": "myAccount.reportschedule",
+					"Submenu": []
+				}
+			]
+		},
+		{
+			"Display": "Plan",
+			"Icon": "glyphicon-list-alt",
+			"URL": "",
+			"Submenu": [
+				{
+					"Display": "Summary",
+					"Icon": "",
+					"URL": "myAccount.plansummary",
+					"Submenu": []
+				},
+				{
+					"Display": "Billing",
+					"Icon": "",
+					"URL": "myAccount.planbilling",
+					"Submenu": []
+				},
+				{
+					"Display": "Plans",
+					"Icon": "",
+					"URL": "myAccount.plans",
+					"Submenu": []
+				}
+			]
+		},
+		{
+			"Display": "Settings",
+			"Icon": "glyphicon-cog",
+			"URL": "myAccount.settings",
+			"Submenu": []
+		},
+		{
+			"Display": "Resources",
+			"Icon": "glyphicon-file",
+			"URL": "",
+			"Submenu": [
+				{
+					"Display": "Apps",
+					"Icon": "",
+					"URL": "myAccount.apps",
+					"Submenu": []
+				},
+				{
+					"Display": "Training",
+					"Icon": "",
+					"URL": "myAccount.training",
+					"Submenu": []
+				},
+				{
+					"Display": "Support",
+					"Icon": "",
+					"URL": "myAccount.support",
+					"Submenu": []
+				},
+				{
+					"Display": "Referrals",
+					"Icon": "",
+					"URL": "myAccount.referrals",
+					"Submenu": []
+				},
+				{
+					"Display": "Feedback",
+					"Icon": "",
+					"URL": "myAccount.feedback",
+					"Submenu": []
+				}
+			]
+		}
+	]
+}

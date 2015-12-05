@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link href="../styles/style.css?ver=4.0" rel="stylesheet">
+  <link href="../styles/font-awesome.min.css" rel="stylesheet">
+  <link href="../styles/buttons2.css" rel="stylesheet">
+  <link href="../styles/side-menu.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+</head>
+
+<body ng-app="uloginApp">
+  <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Add your site or application content here -->
+
+  <div class="center-block center" style="width:100%">
+    <div id="page">
+      <header id="header">
+        <div class="header-holder">
+          <a href="javascript:void(0)" class="opener-nav open"></a>
+          <div>
+            <h1 class="logo">
+                <a href="http://www.rmail.com/" title="RMail" rel="home">
+                  <img src="../images/logo.png" alt="image description" />
+                </a>
+                <a href="http://www.rcom.global" target="_blank" class="rpost-service">
+                  <img src="../images/rpost.png" alt="image description" />
+                </a>
+              </h1>
+          </div>
+          <div class="holder-nav decktop" ng-controller="LoginFormCtrl" ng-show="displayUser !== 'null' && displayUser !== null">
+            <div class="holder-menu-top">
+            </div>
+            <nav class="main-navigation" role="navigation">
+              <div class="menu-header-main-menu-container">
+                <ul id="menu-header-main-menu-1" class="nav-menu cl-effect">
+
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"></li>
+                  <li class="dropdown" role="menu" dropdown>
+                    <a class="dropdown-toggle nodecore" data-toggle="dropdown" href="javascript:void(0)" dropdown-toggle style="text-decoration:none !important;">
+                      <span class="profile-ava">
+                          <i class="fa fa-user"></i>
+                      </span>
+                      <span class="username">{{displayUser}}</span>
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="eborder-top">
+                        <a href="javascript:void(0)" ng-click="signout()" class="nodecore"><i class="icon_key_alt"></i> Sign Out</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <section id="main-content">
+        <div>
+          <div ui-view></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <section id="footer-section">
+    <footer id="footer">
+
+      <div class="bottom-section">
+        <div>
+          <div>
+
+            <ul>
+              <li class=""></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </footer>
+    <!-- #colophon -->
+  </section>
+  <div id="forgotPassword" class="modal modal-static fade modalBanner" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Reset Password</h4>
+        </div>
+        <form role="form" class="form-horizontal" ng-submit="resetPassword()" id="passform" name="passForm" novalidate>
+          <div class="modal-body">
+            <div class="alert alert-danger col-sm-12 hidden" id="resetErr">&nbsp;</div>
+            <div class="form-group row noerrTag" id="resetemailReq">
+              <label for="resetEmail" class="col-sm-6 control-label"> Please enter your email address:</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" id="resetEmail" name="resetEmail" required ng-model="user.resetPEmail" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" ng-click="resetforgotPass()" id="resetPassSub">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modalx"></div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    ! function(A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+          (A[l].q = A[l].q || []).push(arguments)
+        }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-recaptcha/release/angular-recaptcha.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/config.js"></script>
+  <!-- endbuild -->
+
+  <!-- Login feature components -->
+  <script src="scripts/login/registerCtrl.js"></script>
+  <script src="scripts/login/loginFormCtrl.js"></script>
+  <script src="scripts/login/loginCtrl.js"></script>
+  <script src="scripts/login/login.directives.js"></script>
+
+  <!-- My Account template controller -->
+  <script src="scripts/myAccount/myAccountCtrl.js"></script>
+
+  <!-- Dashboard feature components -->
+  <script src="scripts/dashboard/dashboardCtrl.js"></script>
+
+  <!-- Send feature components -->
+  <script src="scripts/send/rmailWebCtrl.js"></script>
+  <script src="scripts/send/rmailInboxCtrl.js"></script>
+  <script src="scripts/send/rsignCtrl.js"></script>
+
+  <!-- Reports feature components -->
+  <script src="scripts/reports/reportScheduleCtrl.js"></script>
+  <script src="scripts/reports/reportSearchCtrl.js"></script>
+
+  <!-- Plan feature components -->
+  <script src="scripts/plan/planSummaryCtrl.js"></script>
+  <script src="scripts/plan/planBillingCtrl.js"></script>
+  <script src="scripts/plan/plansCtrl.js"></script>
+
+  <!-- Settings feature components -->
+  <script src="scripts/settings/settingsCtrl.js"></script>
+
+  <!-- Security -->
+  <script src="scripts/security/authorization.js"></script>
+  <script src="scripts/security/interceptor.js"></script>
+  <script src="scripts/security/retryQueue.js"></script>
+  <script src="scripts/security/security.js"></script>
+
+  <!-- Services -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src="scripts/services/loginredirect.service.js"></script>
+  <script src="scripts/services/services.js"></script>
+
+  <!-- Common -->
+  <script src="scripts/components/spinner.directive.js"></script>
+  <script src="scripts/components/sidemenu.service.js"></script>
+  <script src="scripts/components/sidemenu.directive.js"></script>
+
+  <script>
+    setHeight(1);
+
+    function setHeight(plog) {
+      var WH = $(window).height();
+      var HH = $("#hoe-header").innerHeight();
+      var FH = $("#footer").innerHeight();
+      if (HH == null) {
+        HH = 0;
+      }
+      var offset = plog ? 146 : 146;
+      var contentH = WH - HH - FH - offset;
+      var lpanelH = WH - HH - offset;
+      $("#main-content ").css('min-height', contentH)
+      $(".inner-left-panel ").css('height', lpanelH)
+
+    };
+  </script>
+</body>
+
+</html>

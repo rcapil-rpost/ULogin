@@ -1,0 +1,340 @@
+﻿@media (min-width: 600px) {
+    .smartInput {
+        width: 74%;
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    .smartInput {
+        width: 80%;
+        display: inline;
+    }
+}
+@media (min-width: 800px) {
+    .smartInput {
+        width: 82%;
+        display: inline;
+    }
+}
+
+
+
+@media (min-width: 1000px) {
+    .smartInput {
+        width: 86%;
+        display: inline;
+    }
+}
+
+@media (min-width: 1460px) {
+    .smartInput {
+        width: 90%;
+        display: inline;
+    }
+}
+@media (min-width: 1560px) {
+    .smartInput {
+        width: 92%;
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    .smartSearch {
+        padding: 7px 7px 5px 7px !important;
+    }
+}
+@media (max-width: 767px) {
+    .smartSearch {
+        padding: 7px 7px 5px 7px !important;
+    }
+}
+
+.smartSearch {
+    margin-left:0px;
+}
+@media (min-width: 992px) {
+    .smartSearch {
+        padding: 7px 7px 5px 7px !important;
+        
+    }
+}
+@media (min-width: 1200px) {
+    .smartSearch {
+        padding: 7px 6px 5px 7px !important;
+    }
+}
+
+
+.thead {
+    background: #eef1f6;
+}
+
+input[type="text"]:disabled {
+   
+    cursor:default;
+}
+
+select {
+   
+    cursor:default !important;
+}
+
+fieldset:disabled {
+   
+    cursor:default;
+}
+
+
+
+.reqL:after {content:": *";}
+
+span.Val {
+    margin-left:3px;
+    color:red;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+
+thead td {
+    font-weight:bold;
+}
+
+/*  http:  //charliepark.org/bootstrap_buttons 
+    http: //stackoverflow.com/questions/18296267/form-validation-with-bootstrap-jquery
+
+    http: //www.cssmatic.com/box-shadow
+    */
+
+
+
+/* left-aligned form labels */
+.form-horizontal .control-label{
+   text-align:left !important; 
+}
+
+input, select, textarea {
+    max-width: 280px;
+}
+
+    .sectionRContent {
+     
+      margin-top: 1.5rem;
+     
+    }
+
+
+.shadowr {
+-webkit-box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75);
+
+ cursor: pointer; 
+   border-radius: 10px;
+}
+
+.shadowb {
+    margin:20px 20px 20px 20px;
+ 
+}
+/*#eef1f6;*/
+.shady {
+     background-color:crimson ; 
+}
+
+.shadg {
+     background-color: gold;
+}
+
+.shadb {
+     background-color:aqua ;
+}
+.shad1 {
+     background-color:orchid;
+}
+.shad2 {
+     background-color: wheat; 
+}
+.shad3 {
+     background-color:forestgreen;
+}
+
+.box-shadow-panel {
+    width: 25rem;
+    height: 24rem;
+
+}
+
+.box-shadow-text {
+        vertical-align:middle;
+    text-align:center;
+    padding-top: 10rem;
+    color:#000;
+    font-weight:bold;
+    font-size:large;
+}
+
+.b-ng-visible{
+   visibility: hidden;
+}
+
+.inline-r {
+    display: inline;
+}
+
+
+/* bootstrap overrides */
+h3, h4, label, hr {
+    color: #000;
+}
+
+button {
+    margin-right:1.2rem;
+}
+
+button.nomargin {
+    margin:0;
+}
+
+button.nomargin2 {
+    margin:0;
+    margin-left:1rem;
+}
+
+.well{
+    margin-bottom:0;
+    padding:0;
+   /* padding-top: 10px;inline-r*/
+}
+
+.acctName, .contextProv {
+    color: blue;
+    font-size:large;
+}
+
+.contextProv {
+    text-align:right;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+a.nodecore:hover {
+    text-decoration: none;
+}
+
+body.modal-open {
+overflow-y: scroll;
+padding-right: 0 !important;
+}
+
+.modalBanner {
+    margin-top: 14rem;
+}
+
+
+.hContained {
+    margin-left: 2rem;
+}
+
+.hContained2 {
+    margin-left: 3rem;
+}
+
+
+.hiddenv {
+    visibility:hidden;
+}
+
+.margSearch {
+    margin-left:1rem;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   #file1 {
+   /*border:none;*/ 
+   height:40px;
+
+   padding-top:10px;
+   padding-left:10px;
+}
+}
+
+
+.modalx {
+    /*display:    block;*/
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+ 
+   background: rgba( 255, 255, 255, .8 ) 
+                url('../images/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+.loading {
+    overflow: hidden; 
+     /* display: block;*/
+}
+
+
+
+.high {
+    background-color:#faee14;
+}
+
+.fooText {
+    float:right;
+}
+
+#resetErr {
+    text-align:left;
+}
+
+
+.inputClick {
+    cursor: cell;
+}
+    
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.filtersubmit {
+  position: relative;
+  z-index: 1;
+  left: -25px;
+  top: 1px;
+  color: #7B7B7B;
+  cursor: pointer;
+  width: 0;
+}
+
+span.ui-button-text {
+    padding-top:0px;
+}
+
+
+   

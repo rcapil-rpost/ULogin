@@ -1,0 +1,34 @@
+<div class="side-menu">
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<div class="brand-wrapper">
+				<!-- Hamburger -->
+				<button type="button" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+		</div>
+		<!-- Main Menu -->
+		<div class="side-menu-container" style="text-align: left; padding-left: 15px;">
+			<ul class="nav navbar-nav">
+				<li ng-repeat="m in menuItems" id="dropdown">
+					<a ng-if="m.URL !== '' && m.Submenu.length === 0" ui-sref="{{ m.URL }}" ng-click="select($event)"><span class="glyphicon {{ m.Icon }}"></span> {{ m.Display }}</a>
+					<a ng-if="m.Submenu.length > 0" data-toggle="collapse" data-target="#menuItem{{ $index }}-lvl1">
+						<span class="glyphicon {{ m.Icon }}"></span> {{ m.Display }}<span class="caret"></span>
+					</a>
+					<div id="menuItem{{ $index }}-lvl1" ng-if="m.Submenu.length > 0" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="nav navbar-nav">
+								<li ng-repeat="s in m.Submenu"><a ui-sref="{{ s.URL }}" ng-click="select($event)">{{ s.Display }}</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>

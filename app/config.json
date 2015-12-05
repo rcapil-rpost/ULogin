@@ -1,0 +1,26 @@
+{
+  "default": {
+    "API_URL": "http://Webapi.qa.rpost.net",
+    "CAPTCHA_KEY": "6LcgWxETAAAAADe2CooX8meGWSJYTz0S3fPAMcmM"
+  },
+  "qa": {
+    "API_URL": "http://Webapi.qa.rpost.net",
+    "CAPTCHA_KEY": "6LcgWxETAAAAADe2CooX8meGWSJYTz0S3fPAMcmM"
+  },
+  "production": {
+    "API_URL": "http://webapi.usw.rpost.net",
+    "CAPTCHA_KEY": "6LcgWxETAAAAADe2CooX8meGWSJYTz0S3fPAMcmM"
+  },
+  "productionSsl": {
+    "API_URL": "https://webapi.usw.rpost.net",
+    "CAPTCHA_KEY": "6LcgWxETAAAAADe2CooX8meGWSJYTz0S3fPAMcmM"
+  },
+  "dev": {
+    "API_URL": "http://www.rpostwebapi.com",
+    "CAPTCHA_KEY": "6LcgWxETAAAAADe2CooX8meGWSJYTz0S3fPAMcmM"
+  },
+  "rajasre": {
+    "API_URL": "http://Webapi.qa.rpost.net",
+    "CAPTCHA_KEY": "6LcgWxETAAAAADe2CooX8meGWSJYTz0S3fPAMcmM"
+  }
+}
