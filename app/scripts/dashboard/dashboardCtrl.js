@@ -7,13 +7,6 @@ angular.module('uloginApp')
       $state, $window, security, spinner, Api) {
       var vm = this;
 
-      vm.userSettings = function() {
-        Api.getSettings().then(
-          function(response) {
-            console.log(response);
-          });
-      }
-
-      vm.userSettings();
+      
     }
   ]);
