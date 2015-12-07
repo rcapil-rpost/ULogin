@@ -1,1 +1,121 @@
 <h1>Settings</h1>
+<br/>
+<div ng-form="settings" class="form-horizontal">
+	<h4>Current Settings</h4>
+	<div class="form-group">
+		<div class="col-md-6">
+			<label for="bulkinvoke" class="control-label inline-r">Account settings summary: </label>
+			<button type="button" class="btn btn-default nomargin inline-r" data-toggle="modal" href="#bulkSetting"> Click Here</button>
+		</div>
+	</div>
+	<hr>
+	<h4>Select Settings</h4>
+	<div class="form-group">
+		<label class="col-md-1 control-label" for="serviceLanguage">Service Language: </label>
+		<div class="col-md-4">
+			<select id="serviceLanguage" name="serviceLanguage" class="form-control">
+				<option value="1">Option one</option>
+				<option value="2">Option two</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-1 control-label" for="dateFormat">Date Format: </label>
+		<div class="col-md-4">
+			<select id="dateFormat" name="dateFormat" class="form-control">
+				<option value="1">Option one</option>
+				<option value="2">Option two</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-1 control-label" for="serviceTimeZone">Service Time Zone: </label>
+		<div class="col-md-4">
+			<select id="serviceTimeZone" name="serviceTimeZone" class="form-control">
+				<option value="1">Option one</option>
+				<option value="2">Option two</option>
+			</select>
+		</div>
+	</div>
+	<hr>
+	<h4>Track & Prove</h4>
+	<div class="form-group">
+		<div class="col-md-1">
+			<select id="trackAndProve" name="trackAndProve" class="form-control">
+				<option value="null">Set by App</option>
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<span>Receive Acknowledgement emails confirming messge has reached RPost.</span>
+		</div>
+	</div>
+	<hr>
+	<h4>Encryption</h4>
+	<div class="form-group">
+		<div class="col-md-1">
+			<select id="sendPassword" name="retrievePassword" class="form-control">
+				<option value="null">Set by App</option>
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<span>Automatically send decryption password by email.</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-1">
+			<select id="retrievePassword" name="retrievePassword" class="form-control">
+				<option value="null">Set by App</option>
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<span>Allow the recipient to retrieve the decryption password by email.</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-1">
+			<select id="setPassword" name="setPassword" class="form-control">
+				<option value="null">Set by App</option>
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<span>Allow the recipient to create their own decryption password for future encrypted messages.</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-6">
+			<div class="radio">
+				<label for="radios-0">
+					<input type="radio" name="radios" id="radios-0" value="1" checked="checked"> Send encrypted emails inside a 256-bit AES encrypted PDF.
+				</label>
+			</div>
+			<div class="radio">
+				<label for="radios-1">
+					<input type="radio" name="radios" id="radios-1" value="2"> Send encrypted emails via the Preferred Secure Connect (TLS) mode when available.
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-6">
+			<span>Decryption password for opening RMail encrypted emails sent to me: </span>
+		</div>
+	</div>
+	<div class="form-group" style="margin-left:1%;">
+		<div class="col-md-1">
+			<input type="password" class="form-control inline-r" id="decryptionPassword" placeholder="Insert Password">
+		</div>
+		<div class="col-md-8">
+			<button id="save" name="save" class="btn btn-primary nomargin inline-r">Save</button>
+			<button id="clear" name="clear" class="btn btn-default nomargin inline-r">Clear</button>
+		</div>
+	</div>
+	<hr>
+</div>
