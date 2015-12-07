@@ -118,4 +118,52 @@
 		</div>
 	</div>
 	<hr>
+	<h3>Electronic Signatures</h3>
+	<div class="form-group">
+		<div class="col-md-1">
+			<select id="esignExpiration" name="esignExpiration" class="form-control">
+				<option value="30">30 Days</option>
+				<option value="25">25 Days</option>
+				<option value="20">20 Days</option>
+				<option value="15">15 Days</option>
+				<option value="10">10 Days</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<span>E-Sign agreements are available for signature.</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-1">
+			<select id="setPassword" name="setPassword" class="form-control">
+				<option value="null">Set by App</option>
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+			<span>Allow the recipient to create their own decryption password for future encrypted messages.</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-6">
+			<label class="control-label" for="radios">Signing order: </label>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-md-6">
+			<div class="radio">
+				<label for="radios-0">
+					<input type="radio" name="radios" id="radios-0" value="1" checked="checked"> First Come: Send to all recipients in the 'To' field at the same time. Recipients can sign in any order.
+				</label>
+			</div>
+			<div class="radio">
+				<label for="radios-1">
+					<input type="radio" name="radios" id="radios-1" value="2"> Sequential: Send to recipients in the order listed in the 'To' field.
+				</label>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<h3>Large Mail</h3>
 </div>
