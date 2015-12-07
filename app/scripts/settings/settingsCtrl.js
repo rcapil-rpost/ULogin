@@ -6,11 +6,12 @@ angular.module('uloginApp')
     function(
       $state, $window, security, spinner, Api) {
       var vm = this;
+      vm.settings = {};
 
       vm.userSettings = function() {
-        Api.getTrialStatus(security.currentUser).then(
+        Api.getSettings().then(
           function(response) {
-            console.log(response);
+            vm.settings = response.data;
           });
       }
 
